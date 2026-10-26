@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>FRAICHE · Ventas</title>
+  <meta name="theme-color" content="#1c1a17">
+  <meta name="description" content="Sistema de ventas, inventario y tabulador de perfumes FRAICHE">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Pantalla de acceso con PIN -->
+  <div id="lock" class="lock hidden">
+    <div class="lock-box">
+      <div class="brand">FRAICHE</div>
+      <p id="lock-msg" class="muted">Ingresa tu PIN</p>
+      <form id="lock-form" autocomplete="off">
+        <input id="lock-pin" class="input pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="8" placeholder="••••" required>
+        <input id="lock-pin2" class="input pin hidden" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="8" placeholder="Repite el PIN">
+        <button class="btn primary block" type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <header class="top">
+    <div class="brand-sm">FRAICHE</div>
+    <h1 id="title">Inicio</h1>
+    <a href="#ajustes" class="icon-btn" aria-label="Ajustes">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+    </a>
+  </header>
+
+  <main id="view" class="view"></main>
+
+  <nav id="nav" class="nav"></nav>
+
+  <dialog id="modal" class="modal"></dialog>
+  <div id="toast" class="toast"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/excel.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/inicio.js"></script>
+  <script src="js/vender.js"></script>
+  <script src="js/tabulador.js"></script>
+  <script src="js/inventario.js"></script>
+  <script src="js/pedidos.js"></script>
+  <script src="js/reportes.js"></script>
+  <script src="js/ajustes.js"></script>
+  <script>F.iniciar();</script>
+</body>
+</html>
